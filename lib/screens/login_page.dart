@@ -10,6 +10,7 @@ import '../components/textfield_container.dart';
 import 'tabs_screen.dart';
 
 class LoginPage extends StatelessWidget {
+  static const routeName = './login-page';
   const LoginPage({super.key});
 
   @override
@@ -49,11 +50,15 @@ class LoginPage extends StatelessWidget {
               WelcomeButton(
                   text: 'Login',
                   press: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => TabsScreen()));
+                    Navigator.of(context)
+                        .pushReplacementNamed(TabsScreen.routeName);
+                    // Navigator.push(context,
+                    //     MaterialPageRoute(builder: (context) => TabsScreen()));
                   }),
               SizedBox(height: size.height * 0.04),
               AccountCheck(press: () {
+                // Navigator.of(context)
+                //     .pushNamed(RegisterPage.routeName);
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => RegisterPage()));
               }),

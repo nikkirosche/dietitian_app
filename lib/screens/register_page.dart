@@ -5,12 +5,15 @@ import 'package:flutter_svg/svg.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
 import '../components/welcome_button.dart';
+import './tabs_screen.dart';
 import '../components/textfield_container.dart';
 import 'login_page.dart';
 import '../components/account_check.dart';
 import '../components/or_divider.dart';
 
 class RegisterPage extends StatelessWidget {
+  static const routeName = './register-page';
+
   const RegisterPage({super.key});
 
   @override
@@ -49,15 +52,15 @@ class RegisterPage extends StatelessWidget {
               WelcomeButton(
                   text: 'Register',
                   press: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => LoginPage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginPage()));
                   }),
               SizedBox(height: size.height * 0.04),
               AccountCheck(
                   login: false,
                   press: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => LoginPage()));
+                    Navigator.of(context)
+                        .pushReplacementNamed(TabsScreen.routeName);
                   }),
               OrDivider(),
               Row(

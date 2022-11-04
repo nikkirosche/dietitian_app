@@ -9,8 +9,10 @@ class DietitianItem extends StatelessWidget {
   final String name;
   final String imageurl;
   final Experience experience;
+  final String background;
 
-  DietitianItem(this.id, this.name, this.imageurl, this.experience);
+  DietitianItem(
+      this.id, this.name, this.imageurl, this.experience, this.background);
 
   void selectDietitian(BuildContext context) {
     Navigator.of(context).pushNamed(
@@ -20,6 +22,7 @@ class DietitianItem extends StatelessWidget {
         'name': name,
         'image': imageurl,
         'experience': experience,
+        'background': background,
       },
     );
   }

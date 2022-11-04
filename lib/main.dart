@@ -1,7 +1,10 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 import './screens/welcome_page.dart';
+import './screens/login_page.dart';
+import './screens/register_page.dart';
 import './screens/tabs_screen.dart';
 import 'screens/dietitian_screen.dart';
 import './screens/favourite_screen.dart';
@@ -38,7 +41,10 @@ class MyApp extends StatelessWidget {
       // home: WelcomePage(),
       initialRoute: '/',
       routes: {
-        '/': (context) => TabsScreen(),
+        '/': (context) => WelcomePage(),
+        RegisterPage.routeName: (context) => RegisterPage(),
+        LoginPage.routeName: (context) => LoginPage(),
+        TabsScreen.routeName: (context) => TabsScreen(),
         DietitianScreen.routeName: (context) => DietitianScreen(),
         BookingScreen.routeName: (context) => BookingScreen(),
         FavouriteScreen.routeName: (context) => FavouriteScreen(),

@@ -12,11 +12,13 @@ class Dietitian {
   final String name;
   final String imageUrl;
   final Experience experience;
+  final String background;
 
   const Dietitian({
     required this.id,
     required this.name,
     required this.imageUrl,
     required this.experience,
+    required this.background,
   });
 }

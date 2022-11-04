@@ -7,6 +7,8 @@ import './booking_screen.dart';
 import './favourite_screen.dart';
 
 class TabsScreen extends StatefulWidget {
+  static const routeName = '/tabs-screen';
+
   @override
   State<TabsScreen> createState() => _TabsScreenState();
 }

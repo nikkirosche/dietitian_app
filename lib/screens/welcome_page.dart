@@ -34,6 +34,7 @@ class WelcomePage extends StatelessWidget {
             WelcomeButton(
               text: 'Login',
               press: () {
+                // Navigator.of(context).pushReplacementNamed(LoginPage.routeName);
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => LoginPage()));
               },
@@ -41,6 +42,8 @@ class WelcomePage extends StatelessWidget {
             WelcomeButton(
               text: 'Register',
               press: () {
+                // Navigator.of(context).pushReplacementNamed(RegisterPage.routeName);
+
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => RegisterPage()));
               },
