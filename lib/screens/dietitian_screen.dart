@@ -19,10 +19,15 @@ class _DietitianScreenState extends State<DietitianScreen> {
       body: GridView(
         padding: const EdgeInsets.all(25),
         children: DUMMY_DIETITIANS
-            .map(
-              (data) => DietitianItem(data.id, data.name, data.imageUrl,
-                  data.experience, data.background),
-            )
+            .map((data) => DietitianItem(
+                    id: data.id,
+                    name: data.name,
+                    imageurl: data.imageUrl,
+                    experience: data.experience,
+                    background: data.background)
+                // (data) => DietitianItem(data.id, data.name, data.imageUrl,
+                //     data.experience, data.background),
+                )
             .toList(),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,

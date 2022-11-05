@@ -7,6 +7,7 @@ import './screens/login_page.dart';
 import './screens/register_page.dart';
 import './screens/tabs_screen.dart';
 import 'screens/dietitian_screen.dart';
+import './screens/dietitian_item_screen.dart';
 import './screens/favourite_screen.dart';
 import './screens/booking_screen.dart';
 
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         LoginPage.routeName: (context) => LoginPage(),
         TabsScreen.routeName: (context) => TabsScreen(),
         DietitianScreen.routeName: (context) => DietitianScreen(),
+        DietitianItemScreen.routeName: (context) => DietitianItemScreen(),
         BookingScreen.routeName: (context) => BookingScreen(),
         FavouriteScreen.routeName: (context) => FavouriteScreen(),
       },

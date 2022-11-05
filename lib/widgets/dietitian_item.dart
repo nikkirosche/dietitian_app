@@ -11,8 +11,13 @@ class DietitianItem extends StatelessWidget {
   final Experience experience;
   final String background;
 
-  DietitianItem(
-      this.id, this.name, this.imageurl, this.experience, this.background);
+  DietitianItem({
+    required this.id,
+    required this.name,
+    required this.imageurl,
+    required this.experience,
+    required this.background,
+  });
 
   void selectDietitian(BuildContext context) {
     Navigator.of(context).pushNamed(
@@ -43,8 +48,10 @@ class DietitianItem extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            //check this , do not fully understand what i am doing
-            colors: [Color.fromARGB(0, 245, 127, 254)],
+            colors: [
+              Color.fromARGB(255, 242, 188, 246),
+              Color.fromARGB(255, 245, 127, 254)
+            ],
           ),
           borderRadius: BorderRadius.circular(15),
         ),

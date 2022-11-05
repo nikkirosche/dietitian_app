@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, unused_field
+// ignore_for_file: use_key_in_widget_constructors, unused_field, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
@@ -12,6 +12,6 @@ class BookingScreen extends StatefulWidget {
 class _BookingScreenState extends State<BookingScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }
